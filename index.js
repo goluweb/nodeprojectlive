@@ -1,6 +1,6 @@
 var express = require('express');
 const app = express();
-app.get('/',(req,res)=>{
+app.get('/admin',(req,res)=>{
   res.send('working');
 })
 
