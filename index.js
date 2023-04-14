@@ -58,7 +58,7 @@ app.use('/inquery',inqueryController);
 app.get('/',(req,res)=>{
   res.send('working');
 })
-app.use('/admin', Index_controllers);
+app.get('/admin', Index_controllers);
 app.use('/dashboard',adminSessionAuth,dashboardController);
 app.use('/users',adminSessionAuth,userController);
 app.use('/course',adminSessionAuth,courseController);
