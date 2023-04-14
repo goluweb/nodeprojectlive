@@ -8,15 +8,10 @@ require('dotenv').config();
 const port = process.env.PORT;
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const RedisStore = require('connect-redis')(session);
 const flash = require('connect-flash');
 app.use(cors())
 app.use(session({
-  cookie:{
-    secure: true,
-    maxAge:60000
-},
-store: new RedisStore(),
+ 
   secret: 'your-secret-key',
   resave: false,
   saveUninitialized: true,
