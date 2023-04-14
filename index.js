@@ -49,7 +49,9 @@ const inqueryController = require(__dirname+'/App/Controllers/api/Inquery');
 
 app.use('/inquery',inqueryController);
 // Api
-
+app.get('/',(req,res)=>{
+  res.send('working');
+})
 app.use('/admin', Index_controllers);
 app.use('/dashboard',adminSessionAuth,dashboardController);
 app.use('/users',adminSessionAuth,userController);
