@@ -1,5 +1,5 @@
 var express = require('express');
-const app = express.Route();
+const app = express();
 const ejs = require('ejs');
 app.set('view engine', 'ejs');
 const path = require('path');
