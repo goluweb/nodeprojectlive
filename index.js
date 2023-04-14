@@ -1,5 +1,5 @@
 var express = require('express');
-const app = express();
+const app = express.Route();
 app.get('/admin',(req,res)=>{
   res.send('working');
 })
