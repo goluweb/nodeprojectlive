@@ -3,7 +3,7 @@ require('dotenv').config();
 const database = process.env.DB_NAME;
 
 
-mongoose.connect(database,{
+mongoose.connect(database,{ bufferMaxEntries: 5000 },{
     useNewUrlParser:true,
     useUnifiedTopology:true
 }).then(() => {
