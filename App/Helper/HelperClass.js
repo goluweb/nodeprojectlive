@@ -1,16 +1,10 @@
 const express = require('express');
 const app = express();
 const userModel = require(__dirname+'/../Models/admin_login');
-const session = require('express-session');
 const tastModel = require(__dirname+'/../Models/taskModel');
 const attendance = require(__dirname+'/../Models/attendance');
 const moment = require('moment');
 
-app.use(session({
-    secret: 'your-secret-key',
-    resave: false,
-    saveUninitialized: true,
-  }));
 
 
   // const rolesPermission = (roles)=>{

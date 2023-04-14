@@ -11,6 +11,7 @@ const session = require('express-session');
 const flash = require('connect-flash');
 app.use(cors())
 app.use(session({
+  
   secret: 'your-secret-key',
   resave: false,
   saveUninitialized: true,
