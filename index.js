@@ -8,6 +8,9 @@ require('dotenv').config();
 const port = process.env.PORT;
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const nocache = require('nocache');
+app.use(nocache());
+
 const session = require('express-session');
 const flash = require('connect-flash');
 app.use(cors())
