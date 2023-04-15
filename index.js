@@ -7,14 +7,16 @@ const cors = require('cors')
 require('dotenv').config();
 const port = process.env.PORT;
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const flash = require('connect-flash');
 app.use(cors())
+app.use(cookieParser());
 app.use(session({
- 
   secret: 'your-secret-key',
   resave: false,
   saveUninitialized: true,
+  cookie: { secure: false, maxAge: 3600000 } // Set cookie options here
 }));
 app.use(flash());
 

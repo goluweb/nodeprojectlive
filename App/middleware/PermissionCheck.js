@@ -1,14 +1,9 @@
 const express = require('express');
 const app = express();
 const rolesModel = require(__dirname+'/../Models/roles');
-const session = require('express-session');
+
 const inArray = require('in-array'); 
 
-app.use(session({
-    secret: 'your-secret-key',
-    resave: false,
-    saveUninitialized: true,
-  })); 
 
 const routePermissionCheck = (permissionName)=>{
       
